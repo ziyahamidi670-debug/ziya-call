@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <title>Ziya Call | ضیا کال</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh;
+      font-family: system-ui, sans-serif;
+      background: linear-gradient(145deg, #07111f, #102d48);
+      color: white; display: grid; place-items: center;
+      padding: 22px;
+    }
+    main {
+      width: 100%; max-width: 420px; text-align: center;
+      background: #102033; border: 1px solid #294761;
+      border-radius: 26px; padding: 28px 22px;
+      box-shadow: 0 18px 55px #0005;
+    }
+    .logo {
+      margin: auto; width: 76px; height: 76px;
+      display: grid; place-items: center; border-radius: 24px;
+      background: linear-gradient(135deg, #27d9c2, #2583ff);
+      color: #07111f; font-size: 42px; font-weight: 900;
+    }
+    h1 { margin-bottom: 8px; }
+    p { color: #b9cadb; line-height: 1.9; }
+    button {
+      width: 100%; padding: 14px; margin-top: 12px;
+      border: 0; border-radius: 14px; font-size: 16px;
+      font-weight: 700; cursor: pointer;
+    }
+    .voice { background: #24d8bb; color: #07111f; }
+    .video { background: #378bff; color: white; }
+    #status { font-size: 14px; margin-top: 18px; }
+    small { color: #93a9bd; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="logo">Z</div>
+    <h1>ضیا کال</h1>
+    <p>با خانواده‌ات نزدیک‌تر بمان 💚</p>
+    <p>نسخهٔ آزمایشی رابط تماس</p>
+
+    <button class="voice" onclick="showStatus('تماس صوتی هنوز به سرویس ارتباطی متصل نشده است.')">
+      تماس صوتی
+    </button>
+    <button class="video" onclick="showStatus('تماس تصویری هنوز به سرویس ارتباطی متصل نشده است.')">
+      تماس تصویری
+    </button>
+
+    <p id="status" role="status">به ضیا خوش آمدی!</p>
+    <small>نسخهٔ اولیه — برای آزمایش رابط</small>
+  </main>
+  <script>
+    function showStatus(message) {
+      document.getElementById('status').textContent = message;
+    }
+  </script>
+</body>
+</html>
